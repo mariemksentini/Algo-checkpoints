@@ -1,0 +1,24 @@
+ALGORITHM checkpoint
+VAR
+    sum : INTEGER :=0;
+    voy : INTEGER :=0;
+    words : INTEGER :=1;
+    c: CHAR :="a";
+BEGIN
+    REPEAT
+        Write("donnez une chaine")
+        Read(c)
+        IF (c="a") OR (c="e") OR (c="u") OR (c="i") OR (c="o") THEN
+            voy := voy+1
+            sum:sum+1
+        ELSE_IF (c=" ") THEN
+            sum:=sum+1;
+            words:=words+1
+        ELSE
+            sum:=sum+1
+        END_IF
+    UNTIL (c=".")
+    Write("le  nombre de voyelles est" voy)
+    Write("le nombre de caracteres est" sum)
+    Write("le nombre de mots est" words)
+END
